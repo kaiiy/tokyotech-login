@@ -1,6 +1,6 @@
 # TokyoTech Login
 
-[[NOTE]]
+> [!NOTE]
 > This repository is a port of [titech-login](https://github.com/Kanagu09/titech-login), originally created by [@Kanagu09](https://github.com/Kanagu09).
 
 This is a Google Chrome extension that automatically signs you into the Tokyo Tech Portal.
