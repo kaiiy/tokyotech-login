@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "tokyotech-login",
+  "version": "1.0.0",
+  "icons": {
+    "128": "icon/icon-128.png"
+  },
+  "description": "Login to titech-portal automatically.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://portal.nap.gsic.titech.ac.jp/*"
+      ],
+      "js": [
+        "dist/index.js"
+      ]
+    }
+  ]
+}
