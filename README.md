@@ -9,11 +9,49 @@ Please use it at your own risk.
 
 ## Usage
 
+Follow these steps to set up and use this project:
+
 1. Clone this repository.
-2. Create `config.ts` and fill it with your matrix. (Use `mv config.ts.example config.ts`)
-3. Run `yarn && yarn build`
-4. Launch Google Chrome.
-5. Go to `chrome://extensions/`.
-6. Turn on Developer mode.
-7. Click "LOAD UNPACKED" and select the `tokyotech-login` directory.
-8. When you access `https://portal.nap.gsic.titech.ac.jp`, iit will automatically sign you in.
+
+```bash
+git clone git@github.com:kaiiy/tokyotech-login.git
+cd tokyotech-login
+```
+
+2. Copy the example configuration file and fill it with your matrix information:
+
+```bash
+cp config.ts.example config.ts
+```
+
+config.ts:
+
+```ts 
+const USER_DATA = {
+    ID: "",
+    MATRIX: [
+        ["", "", "", "", "", "", "", "", "", ""],
+        ["", "", "", "", "", "", "", "", "", ""],
+        ["", "", "", "", "", "", "", "", "", ""],
+        ["", "", "", "", "", "", "", "", "", ""],
+        ["", "", "", "", "", "", "", "", "", ""],
+        ["", "", "", "", "", "", "", "", "", ""],
+        ["", "", "", "", "", "", "", "", "", ""],
+    ],
+} as const;
+
+export { USER_DATA };
+```
+
+3. Install dependencies and build the project:
+
+```bash
+yarn install && yarn build
+```
+
+4. Install the extension:
+   1. Open Google Chrome.
+   2. Go to `chrome://extensions/`.
+   3. Turn on Developer mode.
+   4. Click "LOAD UNPACKED" and select the `tokyotech-login` directory.
+   5. When you access `https://portal.nap.gsic.titech.ac.jp`, it will automatically sign you in.
